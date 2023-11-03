@@ -1,15 +1,12 @@
 $( function () {
 	//The pexi inview calls your javasript when 100% on screen.
 	function hover(){
-		function hoverIn() {
-	
-		}
-		//hover out animaties hier
-		function hoverOut() {
-			
-		}
-		//hover in en out functies worden aangeroepen bij hover op #stage
-		$('#stage').hover(hoverIn, hoverOut);
+		var hoverTimeline = gsap.timeline({paused:true})
+		    .to(".cta", {scale:1.1, duration:.6,ease: "back.inOut(3)"})
+		;
+		
+		$("#stage").mouseenter( function() {hoverTimeline.play();});
+		$("#stage").mouseleave( function() {hoverTimeline.reverse();});
 	}
 
 	$('.slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
