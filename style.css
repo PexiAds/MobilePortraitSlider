@@ -21,7 +21,7 @@ body {
 	width: 100%;
 	padding-bottom:125%;
 	/* background: #f7f7f7; */
-	position: absolute;
+	position: relative;
 	cursor: pointer;
 	overflow: hidden;
 	transform-origin: 0 0;
